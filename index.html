@@ -1,25 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Work+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
 
-<style>
-
-    body{
-        font-family: 'Montserrat', sans-serif;
-    }
-</style>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class="max-w-5xl mx-auto ">
+    <h2 class="text-2xl font-semibold text-[#31A5AC] text-center my-6">Money Master💰 </h2>
+
+    <div class="container flex justify-center">
+        <div class=" hidden   md:block  flex-1 ">
+
+            <img class="w-80 mx-auto " src="./money.jpeg" alt="">
+        </div>
+
+        <div class="right text-center flex-1">
+
+            <p class="font-medium text-base text-[#000] mb-2">Income</p>
+            <div class="grid grid-cols-3 gap-6  text-center">
+                <label class=" text-right font-medium text-base text-[#000]" for="incomeField">Income: </label>
+                <input id="incomeField" class="col-span-2 bg-slate-200 rounded px-2 w-44" type="text ">
+            </div>
+
+            <p class="font-medium text-base text-[#000] my-2">Expenses</p>
+            <div class="grid grid-cols-3 mb-4 gap-6  text-center">
+                <label class=" text-right font-medium text-base text-[#000]" for="FoodField">Food: </label>
+                <input id="foodField" class="col-span-2 bg-slate-200 rounded px-2 w-44" type="text ">
+            </div>
+
+            <div class="grid grid-cols-3 mb-4 gap-6  text-center">
+                <label class=" text-right font-medium text-base text-[#000]" for="rentField">Rent: </label>
+                <input id="rentField" class="col-span-2 bg-slate-200 rounded px-2 w-44" type="text ">
+            </div>
+
+            <div class="grid grid-cols-3 mb-4 gap-6  text-center">
+                <label class=" text-right font-medium text-base text-[#000]" for="clothield">Clothes: </label>
+                <input id="clothField" class="col-span-2 bg-slate-200 rounded px-2 w-44" type="text ">
+            </div>
+            <button onclick="calculation()"
+                class="bg-sky-700 text-white px-6 py-2 rounded-sm hover:bg-cyan-700">Calculate</button>
+
+            <p class="font-semibold text-lg text-[#000] mt-4">Total Expenses: <span id="expenses"></span> </p>
+            <p class="font-semibold text-lg text-[#000] mt-4">Balance: <span id="balance"></span> </p>
+
+            <div class="flex justify-center items-center  mb-4 gap-6  text-center">
+                <label class=" text-right font-medium text-base text-[#000]" for="savefield">Save: </label>
+                <input id="saveField" class=" bg-slate-200 rounded px-2 py-1.5 w-20" type="text ">
+                <p class="font-medium text-base text-[#000] my-3">%</p>
+                <button id="save-btn" class="bg-sky-700 text-white rounded-sm px-4 py-2 hover:bg-cyan-700">Save</button>
+            </div>
+
+            <p class="font-semibold text-lg text-[#000] mt-3"> <span id="savings"></span> </p>
+            <p class="font-semibold text-lg text-[#000] mt-3"><span id="remainingBalance"></span>
+            </p>
+
+
+
+        </div>
+
+
+
+    </div>
+
 
 
 
@@ -27,4 +85,5 @@
 
     <script src="./index.js"></script>
 </body>
+
 </html>
