@@ -34,7 +34,7 @@ function calculation() {
     const rent = getValue('rentField');
     const cloth = getValue('clothField');
 
-    if(isNaN(income) == true ||  isNaN(food) == true || isNaN(rent) == true || isNaN(cloth) == true ){
+    if (isNaN(income) == true || isNaN(food) == true || isNaN(rent) == true || isNaN(cloth) == true) {
         alert('Provide a number');
         return;
     }
@@ -46,6 +46,10 @@ function calculation() {
 
     setText('balance', balance);
     setText('expenses', totalExpenses);
+    const save = getValue('saveField');
+
+
+
 
 
 
